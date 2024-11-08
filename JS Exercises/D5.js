@@ -90,6 +90,13 @@ console.log('array con ultimo trims:', justTrims);
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
+for(let i= 0; i < cars.length; i++) {
+  if (cars[i].color.charAt(0) === 'b') {
+    console.log('fizz');
+  }else {
+    console.log('buzz');
+  }
+}
 
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
