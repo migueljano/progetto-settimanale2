@@ -70,19 +70,26 @@ console.log(cars);
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
-cars.push({ brand: 'mercedes', model: 'classe A', color: 'black', trims: ['life', 'style', 'r-line']});
-console.log('Array con new object:', cars);
-for(let i = 0; i< cars.length; i++) {
+
+  let newCar = {
+    brand:'chiLoSa',
+    color: 'jade',
+    trims: ['vita', 'compagnia'],
+    licensePlate: 'InterStellar',
+  };
+  cars.push(newCar); 
+
+  for(let i = 0; i< cars.length; i++) {
   cars[i].trims.pop();
 }
-console.log('array senza trim:', cars)
+console.log('array senza trim:', cars);
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
-const justTrims = []
-for(let i = 0; i< cars.length; i++) {
-  const justTrims= cars [i].trims.shift();
-  justTrims.push(firstTrims);
+  const justTrims = [];   
+
+  for(let i = 0; i< cars.length; i++) {
+  justTrims.push(cars[i].trims[0])
 }
 console.log('array con ultimo trims:', justTrims);
 
@@ -91,10 +98,10 @@ console.log('array con ultimo trims:', justTrims);
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
 for(let i= 0; i < cars.length; i++) {
-  if (cars[i].color.charAt(0) === 'b') {
+  if (cars[i].color[0] === 'b') {
     console.log('fizz');
-  }else {
-    console.log('buzz');
+  }else{
+    console.log('buzz'); 
   }
 }
 
