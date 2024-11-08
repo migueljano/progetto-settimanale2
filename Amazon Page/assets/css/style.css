@@ -45,6 +45,7 @@ main {
   background-image: url(../images/bg-image.png);
   padding: 2rem;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .container-title-git h1,
