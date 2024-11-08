@@ -19,7 +19,7 @@ header {
 .option-title a {
   text-decoration: none;
   padding: 0.4rem;
-  font-size: 20px;
+  font-size: small;
   text-decoration: none;
 }
 
@@ -78,7 +78,6 @@ p {
   border-radius: 10%;
   height: 250px;
   box-shadow: 0 1px 5px gray;
-  background-color: #f8f9fa;
   margin: 0 1rem 3rem;
 }
 
