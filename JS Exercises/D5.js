@@ -11,10 +11,10 @@ REGOLE
     Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.
 */
 const pets = ['dog', 'cat', 'hamster', 'redfish']
- for (let i = 0; i < pets.length; i++) {
-  console.log (pets[i]);
- }
-  
+for (let i = 0; i < pets.length; i++) {
+  console.log(pets[i]);
+}
+
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
@@ -23,9 +23,9 @@ console.log('ordine alfabetico', pets.sort());
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
-pets.reverse() ;
+pets.reverse();
 for (let i = 0; i < pets.length; i++) {
-  console.log (pets[i]);
+  console.log(pets[i]);
 }
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
@@ -33,8 +33,8 @@ for (let i = 0; i < pets.length; i++) {
 const pets1 = ['dog', 'cat', 'hamster', 'redfish', 'gatto'];
 
 
-const firstPet = pets1.shift();  
-pets1.push(firstPet);            
+const firstPet = pets1.shift();
+pets1.push(firstPet);
 console.log(pets1);
 
 /* ESERCIZIO 5
@@ -61,7 +61,7 @@ const cars = [
   },
 ]
 
-for(let i= 0; i < cars.length; i++) {
+for (let i = 0; i < cars.length; i++) {
   cars[i].licensePlate = 'In+ter25';
 }
 console.log(cars);
@@ -71,24 +71,24 @@ console.log(cars);
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
 
-  let newCar = {
-    brand:'chiLoSa',
-    color: 'jade',
-    trims: ['vita', 'compagnia'],
-    licensePlate: 'InterStellar',
-  };
-  cars.push(newCar); 
+const newCar = {
+  brand: 'chiLoSa',
+  color: 'jade',
+  trims: ['vita', 'compagnia'],
+  licensePlate: 'InterStellar',
+};
+cars.push(newCar);
 
-  for(let i = 0; i< cars.length; i++) {
+for (let i = 0; i < cars.length; i++) {
   cars[i].trims.pop();
 }
 console.log('array senza trim:', cars);
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
-  const justTrims = [];   
+const justTrims = [];
 
-  for(let i = 0; i< cars.length; i++) {
+for (let i = 0; i < cars.length; i++) {
   justTrims.push(cars[i].trims[0])
 }
 console.log('array con ultimo trims:', justTrims);
@@ -97,11 +97,11 @@ console.log('array con ultimo trims:', justTrims);
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
-for(let i= 0; i < cars.length; i++) {
+for (let i = 0; i < cars.length; i++) {
   if (cars[i].color[0] === 'b') {
     console.log('fizz');
-  }else{
-    console.log('buzz'); 
+  } else {
+    console.log('buzz');
   }
 }
 
@@ -112,9 +112,113 @@ const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ]
 
+let i = 0;
+let numeroCorrente = 0;
+
+while (i< numericArray.length) {
+
+  numeroCorrente = numericArray[i]
+ 
+  console.log('numeroCorrente ',numeroCorrente)
+
+  if (numeroCorrente === 32 ) {
+    break
+  }
+
+  i++
+}
+
+
+
+
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ['g', 'n', 'u', 'z', 'd']
+const positionsNumber = []
+
+for (let i = 0; i < charactersArray.length; i++) {
+
+  const letter = charactersArray[i].toUpperCase()
+
+  switch (letter) {
+    case 'A':
+      positionsNumber.push(1);
+      break;
+    case 'B':
+      positionsNumber.push(2);
+      break;
+    case 'C':
+      positionsNumber.push(3);
+      break;
+    case 'D':
+      positionsNumber.push(4);
+      break;
+    case 'E':
+      positionsNumber.push(5);
+      break;
+    case 'F':
+      positionsNumber.push(6);
+      break;
+    case 'G':
+      positionsNumber.push(7);
+      break;
+    case 'H':
+      positionsNumber.push(8);
+      break;
+    case 'I':
+      positionsNumber.push(9);
+      break;
+    case 'L':
+      positionsNumber.push(10);
+      break;
+    case 'M':
+      positionsNumber.push(11);
+      break;
+    case 'N':
+      positionsNumber.push(12);
+      break;
+    case 'O':
+      positionsNumber.push(13);
+      break;
+    case 'P':
+      positionsNumber.push(14);
+      break;
+    case 'Q':
+      positionsNumber.push(15);
+      break;
+    case 'R':
+      positionsNumber.push(16);
+      break;
+    case 'S':
+      positionsNumber.push(17);
+      break;
+      case 'T':
+      positionsNumber.push(18);
+      break;
+      case 'U':
+      positionsNumber.push(19);
+      break;
+      case 'V':
+      positionsNumber.push(20);
+      break;
+    case 'Z':
+      positionsNumber.push(21);
+      break;
+  }
+}
+
+console.log(positionsNumber)
+
+const nomi = ['Melissa', 'Hillary', 'Emilia', 'Ronny', 'Miguel']
+
+for (let i = 0; i < nomi.length; i++) {
+  const nome = nomi[i]
+    if (nome === 'Emilia'){
+      console.log (i)
+    }
+}
+
+

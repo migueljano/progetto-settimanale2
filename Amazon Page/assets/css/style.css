@@ -110,24 +110,24 @@ p {
   text-decoration: none;
 }
 
-.back-finale {
+.back-amazon {
   background-color: #364659;
   text-align: center;
   padding: 0.5rem;
 }
 
-.back-finale a:link,
-.back-finale a:visited {
+.back-amazon a:link,
+.back-amazon a:visited {
   color: white;
   font-size: small;
 }
 
-.footer-finish {
+.footer-amazon {
   text-align: center;
   background-color: #222f3e;
 }
 
-.footer-finish-logo {
-  width: 90px;
+.footer-amazon-logo {
+  width: 150px;
   padding: 1.5rem;
 }
